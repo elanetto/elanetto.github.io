@@ -75,7 +75,7 @@ ul li a:hover {
     background-color: #f3ffed;
 }
 
-.content-table tbody tr: :last-of-type {
+.content-table tbody tr:last-of-type {
     border-bottom: 2px solid #7cac5a;  
 }
 
