@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+
+.background-image {
+    background-image: url('image/Gyro_title.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
 body {
 
     background-color: #eee;
@@ -83,11 +91,4 @@ ul li a:hover {
     margin-top: 50px;
     margin-left: 50px;
     padding: 0 0 0 0;
-}
-
-.background-image {
-    background-image: url('image/Gyro_title.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
 }
