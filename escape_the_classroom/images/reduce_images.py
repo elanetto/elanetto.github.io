@@ -9,10 +9,10 @@ import sys
 def resize(file):
     img = Image.open(file)
     x, y = img.size
-    x2, y2 = x//3, y//3
+    x2, y2 = x//4, y//4
     img = img.resize((x2,y2),Image.ANTIALIAS)
     output = f'{file}'
-    img.save(output,quality=90)
+    img.save(output,quality=80)
 
 
 #resize("start_here_9B.jpg")
