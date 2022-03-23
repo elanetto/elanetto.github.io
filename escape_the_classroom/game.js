@@ -67,6 +67,7 @@ const textNodes = [
         options: [
             {
                 text: 'Start',
+                setState: { deadPhone: false, phone: false, powerBank: false, key: false },
                 nextText: 51
             }
         ]
@@ -209,7 +210,7 @@ const textNodes = [
     },
     {
         id: 9,
-        text: 'You cut yourself on the scissors, and there was no one there to give you a band-aid. YOU DIED.',
+        text: 'You cut yourself on the scissors, and there were nobody there to give you a band-aid. YOU DIED.',
         img: 'youdied2.gif',
         options: [
             {
@@ -254,6 +255,11 @@ const textNodes = [
             text: 'The 9B classroom',
             nextText: 2
             },
+            {
+            text: 'Use your phone',
+            requiredState: (currentState) => currentState.phone,
+            nextText: 20
+            },
         ]
     },
     {
@@ -266,7 +272,7 @@ const textNodes = [
             nextText: 15
             },
             {
-            text: 'Try guessing the 4 digits on the locked locker',
+            text: 'Use the secret note to open the locked locker',
             requiredState: (currentState) => currentState.secretNote,
             nextText: 17
             }
@@ -578,13 +584,14 @@ const textNodes = [
         ]
     },
     {
-        id: 28,
+        id: 28, /* YOU DID IT! */
         text: 'YOU DID IT! You escaped the classroom!',
         img: 'the_school.jpg',
         options: [
             {
             text: 'Play again!',
             nextText: 1
+            
             }
         ]
     },
@@ -686,7 +693,7 @@ const textNodes = [
         ]
     },
     {
-        id: 40,  /* If they guess correctly on the code */
+        id: 40,  
         text: 'There is a phone inside the locker! The phone has no power, though.',
         img: 'dead_phone.jpeg',
         options: [
