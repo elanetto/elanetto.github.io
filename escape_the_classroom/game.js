@@ -6,6 +6,10 @@ https://www.youtube.com/watch?v=R1S_NhKkvGA&ab_channel=WebDevSimplified
 Alle bildene er tatt på Bakkeløkka Ungdomsskole, Nesodden.
 */
 
+/*
+Vikar-læreren er bilder av Anne Marit som bor i Bodø. En venninne av Anette T. Hanssen.
+*/
+
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 const bodyEl = document.querySelector('body')
@@ -58,28 +62,32 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        text: 'You enter the 9th grade base, but no one is there. The door locked behind you. What do you do?',
-        img: 'start_here_9B.jpg',
+        img: 'escape_the_room.jpeg',
+        text: 'Want to play a game?',
         options: [
             {
-                text: 'Explore the 9B classroom',
-                nextText: 3
-            },
-            {
-                text: 'Check your phone',
-                setState: { deadPhone: true },
-                nextText: 2
+                text: 'Start',
+                nextText: 51
             }
         ]
     },
     {
         id: 2,
-        text: 'Your phone is dead.',
+        img: '9b_classroom_overview.jpeg',
+        text: 'You enter the 9B classroom. What do you do?',
         options: [
             {
-                text: 'Explore classroom 9B',
+                text: 'Check the desks',
                 nextText: 3
-            }
+            },
+            {
+                text: 'Explore the lockers in 9B',
+                nextText: 6
+            },
+            {
+                text: 'Explore somewhere else',
+                nextText: 10
+            },
         ]
     },
     {
@@ -101,6 +109,7 @@ const textNodes = [
     },
     {
         id: 4,
+        img: 'secret_note.jpeg',
         text: 'The note says: "B3 AW4RE OF TH3 SUBST1TUTE TEACHER!" You put the note in your pocket. Where do you go next?',
         options: [
             {
@@ -108,8 +117,8 @@ const textNodes = [
                 nextText: 6
             },
             {
-                text: 'Go to the 9C classroom.',
-                nextText: 7
+                text: 'Explore somewhere else',
+                nextText: 10
             }
 
         ]
@@ -190,7 +199,7 @@ const textNodes = [
     {
         id: 8,
         text: 'You took the can of coke, and sipped it. It was POISONED. YOU DIED.',
-        img: 'youdied.gif',
+        img: 'youdied2.gif',
         options: [
             {
             text: 'Restart',
@@ -200,8 +209,8 @@ const textNodes = [
     },
     {
         id: 9,
-        text: 'You cut yourself on the scissors, and there was no one there to give you a first aid plaster. YOU DIED.',
-        img: 'youdied.gif',
+        text: 'You cut yourself on the scissors, and there was no one there to give you a band-aid. YOU DIED.',
+        img: 'youdied2.gif',
         options: [
             {
             text: 'Restart',
@@ -212,7 +221,7 @@ const textNodes = [
     {
         id: 11,
         text: 'You cut yourself on the scissors, and you tried to soothe yourself by drinking the coke. The coke was toxic. YOU DIED.',
-        img: 'youdied.gif',
+        img: 'youdied2.gif',
         options: [
             {
             text: 'Restart',
@@ -243,7 +252,7 @@ const textNodes = [
             },
             {
             text: 'The 9B classroom',
-            nextText: 3
+            nextText: 2
             },
         ]
     },
@@ -269,22 +278,6 @@ const textNodes = [
         img: 'empty_locker.jpg',
         options: [
             {
-            text: 'Try guessing the 4-digit code on the locked locker',
-            requiredState: (currentState) => currentState.secretNote,
-            nextText: 16
-            },
-            {
-            text: 'Explore the 9C classroom',
-            nextText: 7
-            }
-        ]
-    },
-    {
-        id: 16,
-        text: 'The locker was empty. What do you do?',
-        img: 'empty_locker.jpg',
-        options: [
-            {
             text: 'Have a look at the note you picked up earlier',
             requiredState: (currentState) => currentState.secretNote,
             nextText: 17
@@ -296,7 +289,7 @@ const textNodes = [
         ]
     },
     {
-        id: 17,  /* Add guess the code game here */
+        id: 17,
         text: 'The note said "B3 AW4RE OF TH3 SUBST1TUTE TEACHER!" What 4-digit code will you use to open the locker? ',
         img: '9C_lockers_closed.jpg',
         options: [
@@ -319,7 +312,7 @@ const textNodes = [
         ]
     },
     {
-        id: 41,  /* Add guess the code game here */
+        id: 41,
         text: 'WRONG CODE! Try again! The note said "B3 AW4RE OF TH3 SUBST1TUTE TEACHER!" What 4-digit code will you use to open the locker? ',
         img: '9C_lockers_closed.jpg',
         options: [
@@ -365,9 +358,9 @@ const textNodes = [
         ]
     },
     {
-        id: 20,  /* Add pickture of phone in hand */
+        id: 20,
         text: 'Your phone is working again! What do you do?',
-        img: 'empty_locker.jpg',
+        img: 'phone_on.jpeg',
         options: [
             {
             text: 'Text your friends',
@@ -384,9 +377,9 @@ const textNodes = [
         ]
     },
     {
-        id: 21,  /* Add pickture of phone in hand: Snap? */
+        id: 21, 
         text: 'You snapped your friends. They are all laughing at you! "What are you doing at school?! We have the DAY OFF, you dingus!" They are sending you snaps of all the fun things that they are doing, while you are locked in at school. This is not helping. What do you do?',
-        img: 'empty_locker.jpg',
+        img: 'snapchat.jpeg',
         options: [
             {
             text: 'Put away the phone and continue trying to find a way out.',
@@ -403,9 +396,9 @@ const textNodes = [
         ]
     },
     {
-        id: 22,  /* Add pickture of phone in hand: Calling mum */
+        id: 22,  /* Calling mum */
         text: 'You tried calling your mum, but she is not answering her phone. She is probably working. What do you do?',
-        img: 'empty_locker.jpg',
+        img: 'call_mom.jpeg',
         options: [
             {
             text: 'Put away the phone and continue trying to find a way out.',
@@ -422,9 +415,9 @@ const textNodes = [
         ]
     },
     {
-        id: 23,  /* Add pickture of phone in hand: calling the sub */
-        text: 'You tried calling the substitute teacher. You can hear it RINGING all the way from classroom 9B! When did the substitute teacher get there?! What do you do?',
-        img: 'empty_locker.jpg',
+        id: 23,  /* calling the sub - 1 */
+        text: 'You tried calling the substitute teacher. You can hear it RINGING from somewhere at school! When did the substitute teacher get here?! What do you do?',
+        img: 'call_sub_1.jpeg',
         options: [
             {
             text: 'Stop the call, and run away and hide. QUICKLY!',
@@ -473,7 +466,7 @@ const textNodes = [
         img: 'cup.jpg',
         options: [
             {
-            text: 'Ok, whatever',
+            text: 'Ok... whatever',
             nextText: 10
             }
         ]
@@ -525,9 +518,9 @@ const textNodes = [
         ]
     },
     {
-        id: 24,  /* Add pickture of phone in hand: calling the sub */
+        id: 24,  /* calling the sub */
         text: 'The substitute teacher answers. You whisper "Hello?", but all you hear is breathing. What do you do?',
-        img: 'empty_locker.jpg',
+        img: 'call_sub_2.jpeg',
         options: [
             {
             text: 'Stop the call, and run away and hide. QUICKLY!',
@@ -540,9 +533,9 @@ const textNodes = [
         ]
     },
     {
-        id: 25,  /* Add pickture of phone in hand: calling the sub */
-        text: 'The substitute teacher answers between her breaths. "Sorry... stairs.... woooah!" She gets her breath back, and asks "What can I do for you today?"',
-        img: 'empty_locker.jpg',
+        id: 25,  /* calling the sub - 3 */
+        text: 'The substitute teacher answers between her breaths. "What.... do you.... want...?"',
+        img: 'call_sub_3.jpeg',
         options: [
             {
             text: 'Stop the call, and run away and hide. QUICKLY!',
@@ -559,9 +552,9 @@ const textNodes = [
         ]
     },
     {
-        id: 26,  /* Add pickture of phone in hand: calling the sub */
-        text: '"You are locked in at school!? How awful! Where are you? I will get you out right now!"',
-        img: 'empty_locker.jpg',
+        id: 26,  /* calling the sub - 4 */
+        text: '"Tell me where you are! I will come and find you!"',
+        img: 'call_sub_4.jpeg',
         options: [
             {
             text: 'Stop the call, and run away and hide. QUICKLY!',
@@ -575,7 +568,18 @@ const textNodes = [
     },
     {
         id: 27,
-        text: 'The substitute teacher explains that it is a teachers planning day, and that all students had the day off. She lets you out. YOU DID IT! ',
+        text: '"You poor thing!" the substitute teacher says. She explains that it is a teachers planning day, and that all students had the day off. She explains that she was out of breath because of walking up all the stairs earlier. She unlocks the door. ',
+        img: 'sub_help.jpeg',
+        options: [
+            {
+            text: 'Go through the door!',
+            nextText: 28
+            }
+        ]
+    },
+    {
+        id: 28,
+        text: 'YOU DID IT! You escaped the classroom!',
         img: 'the_school.jpg',
         options: [
             {
@@ -626,8 +630,7 @@ const textNodes = [
         options: [
             {
             text: 'Use your clues to open it',
-            requiredState: (currentState) => currentState.numbersToilet,
-            requiredState: (currentState) => currentState.numbersFortyTwo,
+            requiredState: (currentState) => currentState.numbersToilet + currentState.numbersFortyTwo,
             nextText: 38
             },
             {
@@ -685,7 +688,7 @@ const textNodes = [
     {
         id: 40,  /* If they guess correctly on the code */
         text: 'There is a phone inside the locker! The phone has no power, though.',
-        img: 'empty_locker.jpg',
+        img: 'dead_phone.jpeg',
         options: [
             {
             text: 'Use the powerbank to charge your phone',
@@ -701,6 +704,32 @@ const textNodes = [
             {
             text: 'Ignore it, and move on',
             nextText: 10
+            }
+        ]
+    },
+    {
+        id: 51,
+        text: 'You ran into the classroom, thinking that you were 5 minutes too late for class. However, the classroom is empty! There is nobody here. You can hear a "click" behind you. Are you locked in?!',
+        img: 'start_here_9B.jpg',
+        options: [
+            {
+                text: 'Try to open the door',
+                nextText: 52
+            },
+            {
+                text: 'Explore the 9th grade base',
+                nextText: 10
+            }
+        ]
+    },
+    {
+        id: 52,
+        text: 'The door is locked! You are stuck, all alone - here at school! What do you do?',
+        img: 'locked_door.jpeg',
+        options: [
+            {
+                text: 'Explore the 9th grade base. There has to be something here to help you escape the classroom!',
+                nextText: 10
             }
         ]
     },
