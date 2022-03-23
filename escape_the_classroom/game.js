@@ -67,7 +67,7 @@ const textNodes = [
         options: [
             {
                 text: 'Start',
-                setState: { deadPhone: false, phone: false, powerBank: false, key: false },
+                setState: { deadPhone: false, phone: false, powerBank: false, key: false, secretNote: false, numbersFortyTwo: false, numbersToilet: false },
                 nextText: 51
             }
         ]
