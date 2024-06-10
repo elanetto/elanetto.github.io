@@ -1,74 +1,40 @@
-Copied ReadMe to fill out:
 
-----
 
-# Your project title
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![App Screenshot](https://github.com/elanetto/portfolio/blob/main/assets/images/portfolio/escape-the-classroom.png?raw=true)
+[Deployed: Escape the Classroom](https://elanetto.github.io/escape_game/index.html)
 
-A simple overview of the use/purpose of the project.
 
-## Description
+# Escape the Classroom
+This was an exam-task done for the university program "Programming for Teachers" which I did in 2022 as a High School Teacher.
+This is, in many ways, the catapult that made me choose to get deeper into programming as a whole.
 
-Add a more detailed description of what your project entails and set out to do.
 
-You can add some bullet points if you'd like to:
+## Tools and technology
+This project is mainly built in JavaScript, and also uses HTML and CSS.
+![badges-html-js-css](https://github.com/elanetto/elanetto.github.io/assets/101054274/2e23833e-e1f7-486c-88a9-a0c0d8a4f71c)
 
-- List item 1
-- List item 2
-- List item 3
 
-## Built With
+## What was the purpose of this project?
+The purpose was to:
+- Create a game using any programming language
+- Something has to move in the game (hover-effect was accepted as moving)
+- The game should be a part of a High School project to be used in the classroom
 
-You can list a the tech stack that you've used over here
+I literally made the classroom into a game with this one.
 
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+## How was the process?
+The process took time. Not only was there a lot of coding in it, but I also needed to map out a plan for the game.
+I had to map out what pictures to take, what text to write, and figure out how it all affected eachother.
 
-## Getting Started
+It was a fun project.
 
-### Installing
-
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
-1. Clone the repo:
-
-```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
-```
-
-2. Install the dependencies:
-
-```
-npm install
-```
-
-### Running
-
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
-
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
-
-## Contributing
-
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+## Learning Points & self assesment
+Looking back at this project now, from the lens of a FrontEnd student in 2024, I am a bit appauled by the CSS. It could definately look better! haha
+At the same time, I am very proud of this project. Especially the JavaScript part.
 
 ## Contact
+You can reach me at hei@anettetherese.no
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+Or, simply find me at [LinkedIn](https://www.linkedin.com/in/anettetherese/)
 
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
-
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
