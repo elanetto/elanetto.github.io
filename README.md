@@ -30,7 +30,7 @@ I had to map out what pictures to take, what text to write, and figure out how i
 It was a fun project.
 
 ## Learning Points & self assesment
-Looking back at this project now, from the lens of a FrontEnd student in 2024, I am a bit appauled by the CSS. It could definately look better! haha
+Looking back at this project now, from the lens of a FrontEnd student in 2024, I am a bit appauled by the CSS. It could definitely look better!
 At the same time, I am very proud of this project. Especially the JavaScript part.
 
 ## Contact
